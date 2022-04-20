@@ -1,0 +1,10 @@
+trees:
+- path: /
+  tree: files
+  args:
+    directory: my_data/
+    # Teach Tiled about .fq files.
+    mimetypes_by_file_ext:
+      .fq: application/x-fq
+    readers_by_mimetype:
+      application/x-fq: custom_readers:read_fq
